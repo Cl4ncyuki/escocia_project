@@ -1,0 +1,314 @@
+/* ================= CONFIGURAÇÃO GERAL ================= */
+
+/* Remove margens e espaçamentos padrão do navegador */
+*{
+
+/* Remove margem padrão */
+margin:0;
+
+/* Remove espaçamento interno padrão */
+padding:0;
+
+/* Faz com que padding e borda não alterem o tamanho do elemento */
+box-sizing:border-box;
+
+}
+
+
+/* Configuração geral do corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    background: 
+        linear-gradient(to bottom, rgba(9, 24, 32, 0.267), rgba(9, 24, 32, 0.9)),
+        url(../img/ChatGPT\ Image\ 6\ de\ mai.\ de\ 2026\,\ 15_57_10.png);
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* HEAD */
+.logopag {
+  height: 150px;
+  width: 150px;
+
+}
+
+
+/* ================= NAVBAR ================= */
+
+/* Estilização do cabeçalho */
+header{
+
+/* Cor de fundo azul */
+background: rgb(17, 61, 79);
+
+/* Cor do texto branca */
+color:rgba(252, 252, 252, 0.925);
+
+/* Espaçamento interno */
+padding:10px;
+
+background: linear-gradient(to bottom, rgba(0,0,0,0.8)0%,  rgb(12, 34, 46)100%);
+}
+
+.selecao{
+  margin-bottom: 150px;
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+.logo img{
+  width: 70px;
+}
+
+/* Barra de navegação */
+.navbar{
+
+    /* Ativa o Flexbox */
+display:flex;
+
+/* Espaço entre logo e menu */
+justify-content:space-between;
+
+/* Alinha verticalmente os elementos */
+justify-content:center;
+
+font-size: 1.5rem;
+
+
+}
+
+/* Logo do site */
+.logo{
+
+/* Tamanho da fonte */
+font-size:24px;
+
+/* Texto em negrito */
+font-weight:bold;
+
+}
+
+
+.links {
+  text-decoration: none; /* Remove o sublinhado padrão */
+  color: #ede7e7;
+  position: relative; /* Necessário para posicionar o sublinhado */
+  padding-bottom: 5px; /* Espaço entre o texto e a linha */
+  margin: 0 15px;
+  font-family: sans-serif;
+}
+
+
+.links::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #357ca4; /* Cor da linha */
+  visibility: hidden;
+  transform: scaleX(0); /* Esconde a linha no início */
+  transition: all 0.3s ease-in-out; /* Velocidade da animação */
+}
+
+/* Animação no Hover */
+.links:hover::after {
+  visibility: visible;
+  transform: scaleX(1); /* Faz a linha aparecer */
+}
+
+/* Links do menu */
+nav a{
+
+/* Cor do texto */
+color:white;
+
+/* Remove sublinhado */
+text-decoration:none;
+
+/* Espaçamento entre os links */
+margin-left:40px;
+
+/* Texto em negrito */
+font-weight:bold;
+
+}
+/* ================= BANNER ================= */
+
+/* Banner */
+.banner{
+background: linear-gradient(to top, rgb(9, 24, 32) 2%, rgba(1, 4, 5, 0.182)15%),
+url(../img/Copa-do-Mundo-2026-conheca-a-Trionda-bola-oficial-0021348700202510040824.webp) no-repeat center;
+    /* Ajusta imagem para ocupar todo espaço */
+background-size:cover;
+
+/* Altura do banner */
+height: 705px;
+
+/* Ativa Flexbox */
+display:flex;
+
+/* Centraliza verticalmente */
+align-items:center;
+
+/* Centraliza horizontalmente */
+justify-content:center;
+
+/* Cor do texto */
+color:white;
+
+/* Centraliza texto */
+text-align:center;
+}
+
+/* Título do banner */
+.banner h1{
+
+/* Fundo preto com transparência */
+background:rgba(17, 61, 79, 0.555);
+
+/* Espaçamento interno */
+padding:20px;
+
+/* Bordas arredondadas */
+border-radius:5px;
+
+font-size: 5rem;
+
+font-family: 'Times New Roman', Times, serif;
+}
+
+
+.murango{
+    font-size: 30px
+}
+/* ================= CONTEÚDO ================= */
+/* Container principal */
+.cardsjogadores {
+  width: 100%;
+  max-width: 1400px; /* 🔥 mais espaço horizontal */
+  margin: 0 auto;
+}
+
+/* Título */
+.titulo{
+  margin-top: 40px;  
+  margin-bottom:30px; /* Espaço abaixo */
+  text-align: center;
+  font-size: 2rem;
+}
+
+.titulosjogadores {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.jogadores {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  flex-wrap: nowrap;      /* 🔥 NÃO deixa quebrar linha */
+  width: 100%;
+
+  overflow-x: auto;       /* 🔥 cria scroll se não couber */
+  padding: 10px 0;
+}
+.alas{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+/* ================= CARDS ================= */
+
+/* Área dos cards */
+
+.card {
+  width: 200px;
+  height: 250px;
+
+  flex: 0 0 auto; /* 🔥 impede encolher/quebrar */
+
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: cover;
+  background-position: center;
+}
+/* sombra por cima */
+.sombra {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* controla a escuridão */
+  top: 0;
+  left: 0;
+}
+
+/* texto fica acima da sombra */
+.info {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  padding: 15px;
+  z-index: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.campo {
+  display: flex;
+  justify-content: center;
+  margin: 40px ;
+}
+
+.imagemcampo{
+  border-radius: 40px;
+}
+
+.grupoC,
+.jogos{
+  display: block;
+  width: 750px;
+  height: 400px;
+  margin: 0 auto; /* centraliza horizontalmente */
+}
+/* ================= FOOTER ================= */
+
+footer{
+
+/* Cor de fundo escura */
+background:#021224;
+
+/* Cor do texto branca */
+color:white;
+
+/* Centraliza texto */
+text-align:center;
+
+/* Espaçamento interno */
+padding:40px;
+
+background:linear-gradient(to bottom, rgb(10, 28, 38), rgb(17, 61, 79));
+
+}

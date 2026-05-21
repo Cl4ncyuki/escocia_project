@@ -1,0 +1,420 @@
+/* ================= CONFIGURAÇÃO GERAL ================= */
+
+/* Remove margens e espaçamentos padrão do navegador */
+*{
+
+/* Remove margem padrão */
+margin:0;
+
+/* Remove espaçamento interno padrão */
+padding:0;
+
+/* Faz com que padding e borda não alterem o tamanho do elemento */
+box-sizing:border-box;
+
+}
+
+
+/* Configuração geral do corpo da página */
+body{
+
+/* Define a fonte do site */
+font-family:Arial, Helvetica, sans-serif;
+
+/* Define a cor de fundo da página */
+background:rgb(10, 28, 38);
+
+}
+
+h2{
+    color: aliceblue;
+    font-size:2rem;
+}
+
+p{
+    color: aliceblue;
+}
+
+/* ================= NAVBAR ================= */
+
+/* Estilização do cabeçalho */
+header{
+
+/* Cor de fundo azul */
+background: rgb(17, 61, 79);
+
+/* Cor do texto branca */
+color:rgba(252, 252, 252, 0.925);
+
+/* Espaçamento interno */
+padding:10px;
+
+background: linear-gradient(to bottom, rgba(0,0,0,0.8)0%,  rgb(12, 34, 46)100%);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+.logo img{
+  width: 70px;
+}
+
+/* Barra de navegação */
+.navbar{
+
+    /* Ativa o Flexbox */
+display:flex;
+
+/* Espaço entre logo e menu */
+justify-content:space-between;
+
+/* Alinha verticalmente os elementos */
+justify-content:center;
+
+font-size: 1.5rem;
+
+}
+
+/* Logo do site */
+.logo{
+
+/* Tamanho da fonte */
+font-size:24px;
+
+/* Texto em negrito */
+font-weight:bold;
+
+}
+
+.links {
+  text-decoration: none; /* Remove o sublinhado padrão */
+  color: #ede7e7;
+  position: relative; /* Necessário para posicionar o sublinhado */
+  padding-bottom: 5px; /* Espaço entre o texto e a linha */
+  margin: 0 15px;
+  font-family: sans-serif;
+}
+
+
+.links::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #357ca4; /* Cor da linha */
+  visibility: hidden;
+  transform: scaleX(0); /* Esconde a linha no início */
+  transition: all 0.3s ease-in-out; /* Velocidade da animação */
+}
+
+/* Animação no Hover */
+.links:hover::after {
+  visibility: visible;
+  transform: scaleX(1); /* Faz a linha aparecer */
+}
+
+
+/* Links do menu */
+nav a{
+
+/* Cor do texto */
+color:white;
+
+/* Remove sublinhado */
+text-decoration:none;
+
+/* Espaçamento entre os links */
+margin-left:50px;
+
+/* Texto em negrito */
+font-weight:bold;
+
+}
+
+
+/* ================= BANNER ================= */
+
+/* Estilização do banner */
+.banner{
+
+/* Imagem de fundo */
+background: url(../img/EscociaNoite.png);
+
+/* Ajusta imagem para ocupar todo espaço */
+background-size:cover;
+
+background-attachment: fixed;
+
+/* Altura do banner */
+height: 575px;
+
+/* Ativa Flexbox */
+display:flex;
+
+/* Centraliza verticalmente */
+align-items:center;
+
+/* Centraliza horizontalmente */
+justify-content:center;
+
+/* Cor do texto */
+color:white;
+
+/* Centraliza texto */
+text-align:center;
+
+}
+
+
+/* Texto sobre imagem */
+.banner h1{
+margin-top: 75px;
+/* Fundo preto com transparência */
+background:rgba(17, 61, 79, 0.555);
+
+/* Espaçamento interno */
+padding:20px;
+
+/* Bordas arredondadas */
+border-radius:5px;
+
+font-size: 5rem;
+
+font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* ================= CONTAINER ================= */
+
+/* Área principal do conteúdo */
+.container{
+
+/* Define largura */
+width:60%;
+
+size: 150px;
+
+/* Centraliza conteúdo */
+margin: auto;
+
+margin-top: 90px;
+}
+
+
+/* ================= FLEX ================= */
+
+/* Layout em duas colunas */
+.flex{
+
+/* Ativa Flexbox */
+display:flex;
+
+/* Alinha verticalmente */
+align-items:center;
+
+/* Espaço entre colunas */
+gap:20px;
+
+/* Espaço inferior */
+margin-bottom:30px;
+
+}
+
+
+/* ================= TEXTO ================= */
+
+/* Coluna de texto */
+.texto{
+
+/* Ocupa metade do espaço */
+flex:1;
+
+}
+
+.conteudo-escocia{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+
+/* TEXTO */
+.textocomida {
+  width: 75%;
+}
+
+/* IMAGEM */
+.imagem img{
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+}
+
+/* ================= CARDS ================= */
+
+.cards-abaixo{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card-mini{
+  width: 200px;
+  height: 150px;
+  background: #cac9c986;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  transition: 0.3s;
+}
+
+/* hover */
+.card-mini:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* ================= IMAGEM ================= */
+
+/* Coluna da imagem */
+.imagem{
+
+/* Ocupa metade do espaço */
+flex:1;
+
+}
+
+
+/* Estilização da imagem */
+.imagem img{
+
+/* Largura total */
+width:100%;
+
+/* Altura fixa */
+height:280px;
+
+/* Ajusta imagem sem distorcer */
+object-fit:cover;
+
+/* Bordas arredondadas */
+border-radius:20px;
+
+}
+
+/* ================= CONTEÚDO ================= */
+/* Container principal */
+.cardsjogadores {
+  width: 100%;
+  max-width: 1400px; /* 🔥 mais espaço horizontal */
+  margin: 0 auto;
+}
+
+/* Título */
+.titulo{
+  margin-top: 40px;  
+  margin-bottom:30px; /* Espaço abaixo */
+  text-align: center;
+  font-size: 2rem;
+}
+
+.titulosjogadores {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.jogadores {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  flex-wrap: nowrap;      /* 🔥 NÃO deixa quebrar linha */
+  width: 100%;
+
+  overflow-x: auto;       /* 🔥 cria scroll se não couber */
+  padding: 10px 0;
+}
+.alas{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+/* ================= CARDS ================= */
+
+/* Área dos cards */
+
+.card {
+  width: 350px;
+  height: 300px;
+
+  flex: 0 0 auto; /* 🔥 impede encolher/quebrar */
+
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: cover;
+  background-position: center;
+}
+/* sombra por cima */
+.sombra {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* controla a escuridão */
+  top: 0;
+  left: 0;
+}
+
+/* texto fica acima da sombra */
+.info {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  padding: 15px;
+  z-index: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ================= FOOTER ================= */
+
+/* Rodapé */
+footer{
+
+/* Cor de fundo escura */
+background:#021224;
+
+/* Cor do texto branca */
+color:white;
+
+/* Centraliza texto */
+text-align:center;
+
+/* Espaçamento interno */
+padding:40px;
+
+background:linear-gradient(to bottom, rgb(10, 28, 38), rgb(17, 61, 79));
+
+}
